@@ -14,12 +14,57 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 40px;
+  width: 1200px;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+}
+
+/*.main-container {*/
+/*  flex-grow: 1;*/
+/*}*/
+
+.navigation {
+  display: flex;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  margin-left: 70px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  width: 339px;
+  margin-left: 30px;
+  padding: 0;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: space-between;
+  width: 268px;
+  margin-left: auto;
+  margin-right: 70px;
+  padding: 0;
 }
 
 .navigation-link {
@@ -39,8 +84,12 @@ body {
   background-color: #000000;
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
-  text-align: center;
   background-position: left bottom, left top;
+}
+
+.picture {
+  display: block;
+  margin: 0 auto;
 }
 
 .advantages-title {
@@ -55,6 +104,29 @@ body {
   text-align: center;
   color: #FFFFFF;
   background: #82B3D3;
+  width: 400px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.advantages-city {
+  display: flex;
+  text-align: center;
+}
+
+.advantages-bridge {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.advantages-item:first-child, .advantages-item:last-child {
+  width: 1200px;
 }
 
 .advantages-light {
@@ -100,9 +172,17 @@ body {
   color: #333333;
 }
 
+.recommendations-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 .recommendations-item {
   text-align: center;
   background: #83B3D31F;
+  width: 400px;
 }
 
 .recommendations-light {
@@ -120,18 +200,21 @@ body {
   color: #333333;
 }
 
+.booking {
+  margin: 96px 304px;
+  text-align: center;
+}
+
 .booking-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .booking-description {
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
   color: #333333;
 }
 
@@ -163,7 +246,21 @@ body {
   background: #82B3D3;
 }
 
+.footer-container {
+  display: flex;
+  width: 1060px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 142px;
+}
 .footer-contacts-phone {
+  width: 720px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -187,10 +284,41 @@ body {
   background-size: cover;
 }
 
+.inner-header-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .breadcrumbs-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+}
+
+.filter-container {
+  display: flex;
+}
+
+.filter-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.accommodation-type {
+  margin-left: 70px;
+}
+
+.hotel-price {
+  margin-left: 140px;
+  margin-right: 70px;
+  width: 288px;
 }
 
 .catalog-filter-title {
@@ -217,6 +345,14 @@ body {
   background-color: transparent;
 }
 
+.catalog-results {
+  display: flex;
+  align-items: center;
+  width: 1060px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
 .catalog-results-total {
   font-weight: 700;
   font-size: 30px;
@@ -227,10 +363,35 @@ body {
   font-family: inherit;
   color: #333333;
   background: #FFFFFF;
+  margin-left: 200px;
+  margin-right: 70px;
+  width: 292px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-view {
+  width: 48px;
+}
+
+.hotels-list {
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  margin: 0 auto;
+  padding: 0;
+  width: 1060px;
+  gap: 20px
 }
 
 .hotel-card {
   color: #333333;
+  width: 340px;
 }
 
 .hotel-card-link {
@@ -245,6 +406,15 @@ body {
 .hotel-card .button-small {
   text-decoration: none;
   background-color: #756157;
+}
+
+.hotel-info {
+  display: flex;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
 }
 
 .favorite-button {
@@ -268,6 +438,18 @@ body {
   line-height: 20px;
   background: #F2F2F2;
   text-transform: uppercase;
+}
+
+.pagination {
+  display: flex;
+  width: 1060px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.pagination-item {
+  width: 60px;
+  margin-right: 8px;
 }
 
 .pagination-link {
